@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fredoka", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-beige: #fefdf6;
+  --color-brand-cream: #fdfcef;
+  --color-brand-dark: #37332b;
+  --color-brand-gray: #e4e3d4;
+  --color-brand-yellow: #f8e473;
+  --color-brand-orange: #ffb40f;
+  --color-brand-pink: #ffaabc;
+  --color-brand-coral: #ff9191;
+  --color-brand-green: #a7b408;
+  --color-brand-blue: #96c1dd;
+}
+
+/* Custom Scrollbar to match cosy warm cream scheme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fdfcef;
+}
+::-webkit-scrollbar-thumb {
+  background: #e4e3d4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffaabc;
+}
+
+/* Glassmorphism custom helper */
+.glass-panel {
+  background: rgba(13, 27, 42, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom bounce & pulse animations for gamified elements */
+@keyframes coin-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-coin {
+  animation: coin-bounce 2s infinite ease-in-out;
+}
+
+@keyframes slow-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: slow-float 4s infinite ease-in-out;
+}
+
+/* Path glow effects */
+.path-glow {
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "STEALER AI Coach",
+  "description": "STEALER – Mi Coach Financiero Virtual con temática de gatito inteligente, estilo Duolingo",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
